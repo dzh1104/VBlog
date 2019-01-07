@@ -1,6 +1,7 @@
 package org.sang.bean;
 
 import java.sql.Timestamp;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -151,4 +152,13 @@ public class Article {
     public void setPageView(Integer pageView) {
         this.pageView = pageView;
     }
+
+@Override
+public String toString() {
+    
+    return "Article{" + "id=" + id + ", title='" + title + '\'' + ", mdContent='" + mdContent + '\'' + ", htmlContent" +
+                   "='" + htmlContent + '\'' + ", summary='" + summary + '\'' + ", cid=" + cid + ", uid=" + uid + ", " +
+                   "publishDate=" + publishDate + ", state=" + state + ", pageView=" + pageView + ", editTime=" + editTime + ", dynamicTags=" + Arrays.toString(dynamicTags) + ", nickname='" + nickname + '\'' + ", cateName='" + cateName + '\'' + ", tags=" + tags + ", stateStr='" + stateStr + '\'' + '}';
+}
+
 }

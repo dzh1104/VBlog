@@ -30,6 +30,8 @@ public class ArticleController {
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public RespBean addNewArticle(Article article) {
+    
+        System.out.println("article: " + article);
         int result = articleService.addNewArticle(article);
         if (result == 1) {
             return new RespBean("success", article.getId() + "");
